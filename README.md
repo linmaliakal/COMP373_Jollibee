@@ -2,5 +2,5 @@
 ## What It Is
 Project 1 for COMP 373. Building a Facility structure for the Jollibee Fast Food Chain. 
 ## UML Diagram
-![UML Diagram](UML.png)
+![UML Diagram](docs/UML.png)
 

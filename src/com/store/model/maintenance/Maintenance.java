@@ -18,7 +18,7 @@ public class Maintenance extends Order implements IMaintenance {
 	public void listMaintRequests() {
 		// TODO Auto-generated method stub
 		RequestList.entrySet().forEach(entry->{
-		    System.out.println("Request Number: " + entry.getKey() + " is for: " + entry.getValue());  
+		    System.out.println("\tRequest Number: " + entry.getKey() + " is for: " + entry.getValue());  
 		 });
 	}
 
@@ -26,7 +26,7 @@ public class Maintenance extends Order implements IMaintenance {
 	public void listMaintenance() {
 		// TODO Auto-generated method stub
 		RequestDate.entrySet().forEach(entry->{
-		    System.out.println("Request Number: " + entry.getKey() + " was performed on: " + entry.getValue());  
+		    System.out.println("\tRequest Number: " + entry.getKey() + " was performed on: " + entry.getValue());  
 		 });
 		}
 
@@ -40,7 +40,7 @@ public class Maintenance extends Order implements IMaintenance {
 	public void scheduleMaintenance(int orderId) {
 		// Add maintenance request to schedule via id.
 		OrderList.add(orderId);
-		System.out.println("Maintenance request " + orderId + " scheduled on " + getRequestDate(orderId));
+		System.out.println("\tMaintenance request " + orderId + " scheduled on " + getRequestDate(orderId));
 		
 	}
 		

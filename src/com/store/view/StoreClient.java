@@ -35,10 +35,9 @@ public class StoreClient {
 		//facilityDetails.setFacilityList("");
 		System.out.println("\tName: \t\t\t" + staffPerson.getName() + "\n" + "\tBirthdate: \t\t"+ staffPerson.getBirthdate() + "\n"+ "\tAddress: \t\t" + staffPerson.getAddress() + "\n"+ "\tPhone Number: \t\t" + staffPerson.getPhoneNumber() + "\n" + "\tPosition: \t\t"+ staffPerson.getPosition() + "\n");
 		System.out.println("\tFacility ID: \t\t" + facility.getFacilityId());
-		System.out.println("\tName of Store: \t\t" + facilityDetails.getFacilityName() + "\n\tType of Food: \t\t" + facilityDetails.getTypeOfFood() + "\n\tFacility Use Interval: \t" + facilityDetails.getUseInterval() + " months" + "\n\tUsage Rate: \t\t" + facilityDetails.calcUsageRate() + "\n\tDown Time: \t\t" + facilityDetails.calcDownTimeForFacility() + " months");
+		System.out.println("\tName of Store: \t\t" + facilityDetails.getFacilityName() + "\n\tType of Food: \t\t" + facilityDetails.getTypeOfFood() + "\n\tFacility Use Interval: \t" + facilityDetails.getUseInterval() + " months" + "\n\tUsage Rate: \t\t" + facilityDetails.calcUsageRate() + "\n\tDown Time: \t\t" + facilityDetails.calcDownTimeForFacility() + " months\n");
+	
 		//adds Maintenance Order for Facility
-		
-		
 		Order order1 = new Order(12);
 		Order order2 = new Order(13);
 		
@@ -61,11 +60,11 @@ public class StoreClient {
 		maintenance.scheduleMaintenance(13);
 		maintenance.setOrderDetails(13, "INSPECTION");
 	
-		System.out.println("Order details are as follows:");
-		System.out.println(maintenance.getOrderDetails(12));
-		System.out.println(maintenance.getOrderDetails(13));
+		System.out.println("\tOrder details are as follows:");
+		System.out.println("\t  " + maintenance.getOrderDetails(12));
+		System.out.println("\t  " + maintenance.getOrderDetails(13));
 		
-		System.out.println("Maintenance Request (12) includes:" //Sample report of maintenance request.
+		System.out.println("\nMaintenance Request (12) includes:" //Sample report of maintenance request.
 				+ "\n Date: " + order1.getRequestDate(12)  
 				+ "\n Time: " + order1.getRequestTime(12) 
 				+ "\n Cost: " + order1.getOrderCost(12));

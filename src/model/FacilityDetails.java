@@ -21,6 +21,8 @@ public class FacilityDetails extends Facility{
 		
 	}
 	
+	public void listActualUsage();
+	
 	public String addFacilityDetail() {
 		//TODO ask user for input for the new detail
 		String newDetail = "The New Detail";

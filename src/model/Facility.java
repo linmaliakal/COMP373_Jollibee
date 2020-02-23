@@ -39,12 +39,6 @@ public class Facility implements IFacility{
 		FacilityList.remove(facilityId);
 	}
 
-	@Override 
-	public void listActualUsage() {
-		// TODO come back to this later
-		
-	}
-
 	
 	
 

@@ -89,8 +89,27 @@ public class FacilityDetails{
 		System.out.println("Facility is now renting out " + FacilityList.size() + " out of " + capacity + " units.");
 	}
 
+<<<<<<< Updated upstream
 	public boolean isInUse() {
 		return isInUse;
 	}	
+=======
+	public int getAvailableCapacity() {
+		return availableCapacity;
+	}
+
+	public void setAvailableCapacity(int availableCapacity) {
+		this.availableCapacity = availableCapacity;
+	}
+
+	public int getFacilityId() {
+		return facilityId;
+	}
+
+	public void setFacilityId(int facilityId) {
+		this.facilityId = facilityId;
+	}
+	
+>>>>>>> Stashed changes
 	
 }

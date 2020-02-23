@@ -6,72 +6,92 @@ import com.store.model.facility.Facility;
 
 public class OrderInfo {
 	int orderId;
+	
 	ArrayList<Order> OrderList = new ArrayList();
 	//AKA the list of performed MAINTENANCE
 	String orderDetails;
 	//AKA details of the actual order
-	ArrayList<String> OrderDetails = new ArrayList();
+	HashMap<Integer, String> OrderDetails = new HashMap<Integer, String>();
 	//AKA the information for request for maintenance
 	HashMap<Integer, String> RequestList = new HashMap<Integer, String>();
 	//AKA the list of maintenance REQUESTS with orderId and OrderDetails
-	Order request;
-	int inspections = 0;
+	int inspections;
+	HashMap<Integer, Long> RequestDate = new HashMap<Integer, Long>();
+	//AKA date of request
+	HashMap<Integer, Long> RequesTime = new HashMap<Integer, Long>();
+	//AKA time of request
+	HashMap<Integer, Long> RequestCost = new HashMap<Integer, Long>();
+	//AKA cost of request
 	
-	public OrderInfo(int orderId, long date, long time, long orderCost) {
+	public OrderInfo() {
+
+	}
+	
+	public int getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(int orderId) {
 		this.orderId = orderId;
-		this.date = date;
-		this.time = time;
-		this.orderCost = orderCost;
 	}
 	
-	public String getOrderDetails(int orderId) {
-		return RequestList.get(orderId);
+	public HashMap<Integer, Long> getRequestDate() {
+		return RequestDate;
 	}
 
-	public void setOrderDetails(int orderId, String orderDetails) {
-		RequestList.put(orderId, orderDetails);
+	public void setRequestDate(HashMap<Integer, Long> requestDate) {
+		RequestDate = requestDate;
+	}
+
+	public HashMap<Integer, Long> getRequesTime() {
+		return RequesTime;
+	}
+
+	public void setRequesTime(HashMap<Integer, Long> requesTime) {
+		RequesTime = requesTime;
+	}
+
+	public HashMap<Integer, Long> getRequestCost() {
+		return RequestCost;
+	}
+
+	public void setRequestCost(HashMap<Integer, Long> requestCost) {
+		RequestCost = requestCost;
 	}
 	
+	public ArrayList<Order> getOrderList() {
+		return OrderList;
+	}
 
-	long date;
-	long time;
-	long orderCost = 400;
+	public void setOrderList(ArrayList<Order> orderList) {
+		OrderList = orderList;
+	}
+
+	public HashMap<Integer, String> getRequestList() {
+		return RequestList;
+	}
+
+	public void setRequestList(HashMap<Integer, String> requestList) {
+		RequestList = requestList;
+	}
+
 	
-	public long getDate() {
-		return date;
-	}
-
-	public void setDate(long date) {
-		this.date = date;
-	}
-
-	public long getTime() {
-		return time;
-	}
-
-	public void setTime(long time) {
-		this.time = time;
-	}
-
-	public long getOrderCost() {
-		return orderCost;
-	}
-
-	public void setOrderCost(long orderCost) {
-		this.orderCost = orderCost;
-	}
-	
-	
-	public ArrayList<String> addOrderDetails() {
+	public HashMap<Integer, String> addOrderDetails(Integer orderId, String addNewDetail) {
 		//TODO ask user for input for the new detail. MAKE THIS A HASHMAP
-		String newDetail = "The New Detail";
-		OrderDetails.add(newDetail);
+		OrderDetails.put(orderId, addNewDetail);
 		return OrderDetails;
 	}
 
-	public void deleteOrderDetails(String orderDetail) {
+	public void deleteOrderDetails(Integer orderIndex) {
 		// TODO use the given id to remove a facility from FacilityList
-		OrderDetails.remove(orderDetail);
+		OrderDetails.remove(orderIndex);
+	}
+	
+	public void setOrderDetails(int orderIndex, String orderDetails) {
+		OrderDetails.put(orderIndex,orderDetails);
+	}
+	public String getOrderDetails(int orderIndex) {
+		return OrderDetails.get(orderIndex);
 	}
 	
 }

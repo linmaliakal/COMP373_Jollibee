@@ -4,8 +4,8 @@ import java.util.HashMap;
 
 
 public class Maintenance extends Order implements IMaintenance {
-	public Maintenance(int orderId, long date, long time, long orderCost) {
-		super(orderId, date, time, orderCost);
+	public Maintenance() {
+
 	}
 	@Override
 	public void listInspections() {
@@ -29,19 +29,27 @@ public class Maintenance extends Order implements IMaintenance {
 		}
 	} 
 	
-	public HashMap<Integer, String> setMaintenanceInfo(int orderId, String order){
-		//TODO this is the list of orders
-		RequestList.put(orderId, order);
+	public HashMap<Integer, String> setMaintenanceInfo(int orderId, long date, long time, long cost) {
+		setOrderId(orderId);
+		RequestDate.put(orderId, date);
+		RequestTime.put(orderId, time);
+		OrderCost.put(orderId, cost);
+		OrderList.add(orderId);
 		return RequestList;
 	}
 	
-	public Order makeFacilityMaintenanceRequest(Order order) {
-		this.request = order;
-		return request;
+	public int makeFacilityMaintenanceRequest(int orderId, long date, long time, long cost) {
+		setOrderId(orderId);
+		RequestDate.put(orderId, date);
+		RequestTime.put(orderId, time);
+		OrderCost.put(orderId, cost);
+		OrderList.add(orderId);
+		return getOrderId();
 	}
 	
 	public String getMaintenanceInfo(int orderId){
-		return RequestList.get(orderId);
+		
+		return System.out.println("The time of the request is: "+);
 	}
 	
 	public void scheduleMaintenance() {

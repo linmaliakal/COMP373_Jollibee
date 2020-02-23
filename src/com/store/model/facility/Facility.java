@@ -28,8 +28,13 @@ public class Facility extends FacilityRequests implements IFacility{
 		// TODO use getFacility to create a new one and add to the FacilityList
 		
 		int newFacility = facilityId++;
+<<<<<<< Updated upstream
 		//FacilityList.add(newFacility);
 		return facilityId;
+=======
+		FacilityList.add(newFacility);
+		return getFacilityId();
+>>>>>>> Stashed changes
 	}
 	
 	public void removeFacility(int facilityId) {

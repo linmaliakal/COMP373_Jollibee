@@ -18,10 +18,10 @@ public class Facility extends FacilityRequests implements IFacility{
 	
 	@Override
 	public void listFacilities() {
-		// TODO Auto-generated method stub
-		//for(int i=0;i<FacilityList.size();i++) {
-		//	System.out.println(FacilityList.get(i));
-		//}
+//		 TODO Auto-generated method stub
+		for(int i=0;i<FacilityList.size();i++) {
+			System.out.println(FacilityList.get(i));
+		}
 		
 	}
 	public int createFacility() {

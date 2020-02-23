@@ -10,7 +10,7 @@ public class FacilityDetails{
 	private boolean isInUse;
 	private String facilityName;
 	private String typeOfFood;
-	private ArrayList<Facility> FacilityList = new ArrayList<Facility>();
+	public ArrayList<Facility> FacilityList = new ArrayList<Facility>();
 	
 	public int getUseInterval() {
 		return useInterval;

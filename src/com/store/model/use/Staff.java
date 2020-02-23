@@ -13,7 +13,7 @@ public class Staff implements IUse{
 	private String address;
 	private Long phoneNumber;
 	private String position;
-	//private List<> allStaff = new ArrayList<>();
+	private ArrayList<String> allStaff = new ArrayList<String>();
 	
 	/*public Staff(Long staffSSN, String name, String birthdate, String address, Long phoneNumber, String position) {
 		this.staffSSN = staffSSN;
@@ -37,6 +37,7 @@ public class Staff implements IUse{
 	}
 
 	public void setName(String name) {
+		allStaff.add(name);
 		this.name = name;
 	}
 
@@ -70,5 +71,13 @@ public class Staff implements IUse{
 
 	public void setPosition(String position) {
 		this.position = position;
+	}
+
+	@Override
+	public void ListAllStaff() {
+		for(int i=0;i<allStaff.size();i++) {
+			System.out.println(allStaff.get(i));
+		}
+		
 	}
 }

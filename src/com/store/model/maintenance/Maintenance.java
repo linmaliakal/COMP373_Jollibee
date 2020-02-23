@@ -10,9 +10,8 @@ public class Maintenance extends Order implements IMaintenance {
 	}
 	
 	@Override
-	public void listInspections() {
-		// TODO Auto-generated method stub
-		
+	public String listInspections() {
+		return ("There were " + getInspections() + " total inspections");
 	}
 
 	@Override
@@ -26,10 +25,11 @@ public class Maintenance extends Order implements IMaintenance {
 	@Override
 	public void listMaintenance() {
 		// TODO Auto-generated method stub
-		for(int i=0;i<OrderList.size();i++) {
-			System.out.println(OrderList.get(i));
+		RequestDate.entrySet().forEach(entry->{
+		    System.out.println("Request Number: " + entry.getKey() + " was performed on: " + entry.getValue());  
+		 });
 		}
-	} 
+
 	
 
 	public String makeFacilityMaintRequest(int orderId, String orderDetail) {
@@ -40,7 +40,7 @@ public class Maintenance extends Order implements IMaintenance {
 	public void scheduleMaintenance(int orderId) {
 		// Add maintenance request to schedule via id.
 		OrderList.add(orderId);
-		System.out.println("Maintenance request " + orderId + " scheduled on " + getRequestDate(12));
+		System.out.println("Maintenance request " + orderId + " scheduled on " + getRequestDate(orderId));
 		
 	}
 		

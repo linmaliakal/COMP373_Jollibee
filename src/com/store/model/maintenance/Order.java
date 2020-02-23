@@ -13,6 +13,7 @@ public class Order{
 	ArrayList<Integer> OrderList = new ArrayList();
 	//AKA the list of performed MAINTENANCE
 	ArrayList<String> OrderDetails = new ArrayList();
+
 	//AKA details of the actual order
 	HashMap<Integer, ArrayList<String>> RequestOrderDetails = new HashMap<Integer, ArrayList<String>>();
 	//AKA the information for request for maintenance
@@ -26,6 +27,7 @@ public class Order{
 	HashMap<Integer, Long> OrderCost = new HashMap<Integer, Long>();
 	//AKA cost of request
 	
+
 	
 	public int getOrderId() {
 		return orderId;
@@ -39,24 +41,24 @@ public class Order{
 		return RequestDate.get(orderId);
 	}
 
-	public void setRequestDate(HashMap<Integer, Long> requestDate) {
-		RequestDate = requestDate;
+	public void setRequestDate(int orderId, Long requestDate) {
+		RequestDate.put(orderId, requestDate);
 	}
 
 	public Long getRequestTime(int orderId) {
 		return RequestTime.get(orderId);
 	}
 
-	public void setRequestTime(HashMap<Integer, Long> requestTime) {
-		RequestTime = requestTime;
+	public void setRequestTime(int orderId, Long requestTime) {
+		RequestTime.put(orderId, requestTime);
 	}
 
 	public Long getOrderCost(int orderId) {
 		return OrderCost.get(orderId);
 	}
 
-	public void setOrderCost(HashMap<Integer, Long> requestCost) {
-		OrderCost = requestCost;
+	public void setOrderCost(int orderId, Long requestCost) {
+		OrderCost.put(orderId, requestCost);
 	}
 	
 	public ArrayList<Integer> getOrderList() {
@@ -90,11 +92,12 @@ public class Order{
 	public void setOrderDetails(int orderIndex, String orderDetails) {
 		OrderDetails.set(orderIndex,orderDetails);
 	}
-	public ArrayList<String> getRequestOrderDetails(int orderIndex) {
-		
-		return;
+	public ArrayList<String> getRequestOrderDetails() {
+		return getOrderDetails();
 	}
-
+	public void setRequestOrderDetails(ArrayList<String> orderDetails) {
+		setOrderDetails(orderDetails);
+	}
 	public void setRequestOrderDetails(HashMap<Integer, ArrayList<String>> requestOrderDetails) {
 		RequestOrderDetails = requestOrderDetails;
 	}
@@ -103,11 +106,16 @@ public class Order{
 		return OrderDetails.get(orderIndex);
 	}
 	
+	public ArrayList<String> getOrderDetails() {
+		return OrderDetails;
+	}
+
+	public void setOrderDetails(ArrayList<String> orderDetails) {
+		OrderDetails = orderDetails;
+	}
 	
-//	public void setOrderDetails(String orderDetails) {
-//		this.orderDetails = orderDetails;
-//	}
-//	
+	
+
 
 	
 

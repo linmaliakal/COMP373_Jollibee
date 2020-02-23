@@ -1,14 +1,11 @@
 package com.store.model.facility;
 import java.util.*;
 
-public class Facility implements IFacility{
-	
-	ArrayList<Integer> FacilityList = new ArrayList();
-	int facilityId = 0;
+public class Facility extends FacilityRequests implements IFacility{
 	
 	
 	public Facility(int facilityId) {
-		int id = facilityId;
+		super(facilityId);
 	}
 	
 	public int getFacilityId() {

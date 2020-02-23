@@ -2,14 +2,17 @@ package com.store.model.facility;
 
 import java.util.ArrayList;
 
-public class FacilityDetails extends Facility{
-	int capacity = 20;
+public class FacilityDetails{
+	private static final int capacity = 30;
+	int facilityId = 0;
 	int useInterval;
+	int availableCapacity = 0;
 	boolean isInUse;
+	ArrayList<Integer> FacilityList = new ArrayList();
 	
 	ArrayList<String> FacilityDetails = new ArrayList();
+	
 	public FacilityDetails(int facilityId) {
-		super(facilityId);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -19,13 +22,6 @@ public class FacilityDetails extends Facility{
 		return useInterval;
 	}
 	
-	public void calcProblemRateForFacility() {
-		//TODO 
-	}
-	
-	public void listActualUsage() {
-		//TODO this is how many facilities are currently in use
-	}
 	
 	public String addFacilityDetail() {
 		//TODO ask user for input for the new detail

@@ -1,21 +1,21 @@
 package com.store.model.maintenance;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 public class Order{
-	public Order() {
+	int orderId;
+	public Order(int orderId) {
 	
 	}
 
-	int orderId;
+	
 	
 	ArrayList<Integer> OrderList = new ArrayList();
 	//AKA the list of performed MAINTENANCE
-	ArrayList<String> OrderDetails = new ArrayList();
 
-	//AKA details of the actual order
-	HashMap<Integer, ArrayList<String>> RequestOrderDetails = new HashMap<Integer, ArrayList<String>>();
+	HashMap<Integer, String> OrderDetails = new HashMap<Integer, String>();
+	//AKA DETAILS of the order. the TYPE of order. can be INSPECTION, FOOD, MACHINE, or CLEAN
+
 	//AKA the information for request for maintenance
 	HashMap<Integer, String> RequestList = new HashMap<Integer, String>();
 	//AKA the list of maintenance REQUESTS with orderId and OrderDetails
@@ -76,50 +76,18 @@ public class Order{
 	public void setRequestList(HashMap<Integer, String> requestList) {
 		RequestList = requestList;
 	}
-
 	
-	public ArrayList addOrderDetails(String addNewDetail) {
-		//TODO ask user for input for the new detail. MAKE THIS A HASHMAP
-		OrderDetails.add(addNewDetail);
-		return OrderDetails;
-	}
-
-	public void deleteOrderDetails(Integer orderIndex) {
-		// TODO use the given id to remove a facility from FacilityList
-		OrderDetails.remove(orderIndex);
-	}
-	
-	public void setOrderDetails(int orderIndex, String orderDetails) {
-		OrderDetails.set(orderIndex,orderDetails);
-	}
-	public ArrayList<String> getRequestOrderDetails() {
-		return getOrderDetails();
-	}
-	public void setRequestOrderDetails(ArrayList<String> orderDetails) {
-		setOrderDetails(orderDetails);
-	}
-	public void setRequestOrderDetails(HashMap<Integer, ArrayList<String>> requestOrderDetails) {
-		RequestOrderDetails = requestOrderDetails;
-	}
 
 	public String getOrderDetails(int orderIndex) {
 		return OrderDetails.get(orderIndex);
 	}
 	
-	public ArrayList<String> getOrderDetails() {
-		return OrderDetails;
-	}
+	
 
-	public void setOrderDetails(ArrayList<String> orderDetails) {
-		OrderDetails = orderDetails;
+	public void setOrderDetails(int orderId, String detail) {
+		OrderDetails.put(orderId, detail);
 	}
 	
 	
-
-
-	
-
-	
-
 	
 }

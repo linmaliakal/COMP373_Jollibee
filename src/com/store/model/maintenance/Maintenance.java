@@ -5,10 +5,10 @@ import java.util.HashMap;
 
 
 public class Maintenance extends Order implements IMaintenance {
-	public Maintenance() {
+	public Maintenance(int orderId) {
+		super(orderId);
 	}
-	HashMap<Integer, ArrayList<Long>> MaintenanceInfoList = new HashMap<Integer, ArrayList<Long>>();
-	ArrayList<Long> MaintenanceInfo = new ArrayList();
+	
 	@Override
 	public void listInspections() {
 		// TODO Auto-generated method stub
@@ -18,9 +18,9 @@ public class Maintenance extends Order implements IMaintenance {
 	@Override
 	public void listMaintRequests() {
 		// TODO Auto-generated method stub
-		for(int i=0;i<RequestList.size();i++) {
-			System.out.println(RequestList.get(i));
-		}
+		RequestList.entrySet().forEach(entry->{
+		    System.out.println("Request Number: " + entry.getKey() + " is for: " + entry.getValue());  
+		 });
 	}
 
 	@Override
@@ -31,40 +31,17 @@ public class Maintenance extends Order implements IMaintenance {
 		}
 	} 
 	
-//	public Maintenance setMaintenanceInfo() {
-//		RequestDate.put(orderId, getRequestDate(orderId));
-//		RequestTime.put(orderId, getRequestTime(orderId));
-//		OrderCost.put(orderId, getOrderCost(orderId));
-//		OrderList.add(orderId);
-//		return RequestList;
-//	}
-	public void setMaintenanceInfo(int orderId) {
-		MaintenanceInfo.set(0, getRequestDate(orderId));
-		//AKA setting the date based on index 0 of maintenance info
-		MaintenanceInfo.set(1, getRequestTime(orderId));
-		//AKA setting the time based on index 1 of maintenance info
-		MaintenanceInfo.set(2, getOrderCost(orderId));
+
+	public String makeFacilityMaintRequest(int orderId, String orderDetail) {
+		RequestList.put(orderId,orderDetail);
+		return ("Request order number " + orderId + " is a request to maintain " + orderDetail);
 	}
-	public ArrayList<Long> getMaintenanceInfo(int orderId){
-		
-		return MaintenanceInfo;
-	}
-	public int makeFacilityMaintenanceRequest(int orderId) {
-		setOrderId(orderId);
-		RequestDate.put(orderId, date);
-		RequestTime.put(orderId, time);
-		OrderCost.put(orderId, cost);
-		OrderList.add(orderId);
-		return getOrderId();
-	}
-	
-//	public String getMaintenanceInfo(int orderId){
-//		return "The date of the request is: " + getRequestDate(orderId) + "The time of the request is: " + getRequestTime(orderId) + "\n The request cost is :" + getOrderCost(orderId);
-//	}
 	
 	public void scheduleMaintenance(int orderId) {
+		// Add maintenance request to schedule via id.
 		OrderList.add(orderId);
-		 
+		System.out.println("Maintenance request " + orderId + " scheduled on " + getRequestDate(12));
+		
 	}
 		
  }

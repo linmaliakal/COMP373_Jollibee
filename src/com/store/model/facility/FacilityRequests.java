@@ -1,4 +1,4 @@
-package model;
+package com.store.model.facility;
 
 public class FacilityRequests extends Facility {
 	public void FacilityRequest() {

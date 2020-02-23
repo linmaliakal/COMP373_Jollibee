@@ -1,4 +1,4 @@
-package model;
+package com.store.model.facility;
 import java.util.*;
 
 public class Facility implements IFacility{

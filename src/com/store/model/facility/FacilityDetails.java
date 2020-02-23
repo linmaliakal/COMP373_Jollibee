@@ -1,10 +1,12 @@
-package model;
+package com.store.model.facility;
 
 import java.util.ArrayList;
 
 public class FacilityDetails extends Facility{
 	int capacity = 20;
 	int useInterval;
+	boolean isInUse;
+	
 	ArrayList<String> FacilityDetails = new ArrayList();
 	public FacilityDetails(int facilityId) {
 		super(facilityId);
@@ -18,10 +20,12 @@ public class FacilityDetails extends Facility{
 	}
 	
 	public void calcProblemRateForFacility() {
-		
+		//TODO 
 	}
 	
-	public void listActualUsage();
+	public void listActualUsage() {
+		//TODO this is how many facilities are currently in use
+	}
 	
 	public String addFacilityDetail() {
 		//TODO ask user for input for the new detail

@@ -1,8 +1,7 @@
-package model;
+package com.store.model.facility;
 
 public interface IFacility {
 	
 	public void listFacilities();
-	public void listActualUsage();
 
 }

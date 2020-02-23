@@ -21,9 +21,7 @@ public class StoreClient {
 		staffPerson.setAddress("6301 N Sheridan Road, Evanston, IL 60660");
 		staffPerson.setPhoneNumber(8474019233l);
 		staffPerson.setPosition("Manager");
-		
-		System.out.println("\tName: \t\t\t" + staffPerson.getName() + "\n" + "\tBirthdate: \t\t"+ staffPerson.getBirthdate() + "\n"+ "\tAddress: \t\t" + staffPerson.getAddress() + "\n"+ "\tPhone Number: \t\t" + staffPerson.getPhoneNumber() + "\n" + "\tPosition: \t\t"+ staffPerson.getPosition() + "\n");
-		
+				
 		//TODO add new Facility & it's Details
 		Facility facility = new Facility(0);
 		facility.setFacilityId(10);

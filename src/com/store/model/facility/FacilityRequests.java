@@ -7,7 +7,7 @@ public class FacilityRequests extends FacilityDetails{
 	}
 	
 	public void assignFacilityToUse() {
-		
+		String FacilityUse= "food store";
 	}
 	public void vacateFacility() {
 		FacilityList.remove(facilityId);

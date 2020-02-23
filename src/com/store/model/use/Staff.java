@@ -5,7 +5,7 @@ import java.util.List;
 
 //import other class packages needed
 
-public class Staff {
+public class Staff implements IUse{
 	
 	private Long staffSSN;
 	private String name;

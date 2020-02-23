@@ -47,8 +47,7 @@ public class StoreClient {
 		System.out.println("\tName: \t\t\t" + staffPerson.getName() + "\n" + "\tBirthdate: \t\t"+ staffPerson.getBirthdate() + "\n"+ "\tAddress: \t\t" + staffPerson.getAddress() + "\n"+ "\tPhone Number: \t\t" + staffPerson.getPhoneNumber() + "\n" + "\tPosition: \t\t"+ staffPerson.getPosition() + "\n");
 		System.out.println("\tFacility ID: \t\t" + facility.getFacilityId());
 		System.out.println("\tName of Store: \t\t" + facilityDetails.getFacilityName() + "\n\tType of Food: \t\t" + facilityDetails.getTypeOfFood() + "\n\tFacility Use Interval: \t" + facilityDetails.getUseInterval() + " months" + "\n\tUsage Rate: \t\t" + facilityDetails.calcUsageRate() + "\n\tDown Time: \t\t" + facilityDetails.calcDownTimeForFacility() + " months");
-		System.out.println("Order details for order ID " + order1.getOrderId() + " are as follows: " + order1.getOrderDetails()+"\n Date is: " + order1.getDate() + "\n Time is: " + order1.getTime());
-		System.out.println(order1.getOrderId());
+	
 	}
 
 }

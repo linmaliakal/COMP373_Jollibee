@@ -24,7 +24,7 @@ public class FacilityDetails{
 	
 	
 	public ArrayList<String> addFacilityDetail() {
-		//TODO ask user for input for the new detail
+		//TODO ask user for input for the new detail. MAKE THIS A HASHMAP
 		String newDetail = "The New Detail";
 		FacilityDetails.add(newDetail);
 		return FacilityDetails;

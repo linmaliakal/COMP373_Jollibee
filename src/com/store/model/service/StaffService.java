@@ -6,7 +6,7 @@ import com.store.model.use.Staff;
 public class StaffService {
 	private StaffDAO staffDAO = new StaffDAO();
 	
-	//search customer by ID from the DB
+	//search staff by ID/SSN
 	public Staff findStaffById(Long staffSSN) {
 			
 		try {
@@ -19,7 +19,7 @@ public class StaffService {
 		return null;
 	}
 	
-	//Insert a new customer in the DB
+	//Insert a new Staff
 	public void addStaff(Staff staff) {
 		
 		try {

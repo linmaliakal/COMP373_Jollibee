@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Staff {
 	
-	private long staffSSN;
+	private Long staffSSN;
 	private String name;
 	private String birthdate;
 	private String address;
@@ -15,20 +15,20 @@ public class Staff {
 	private String position;
 	//private List<> allStaff = new ArrayList<>();
 	
-	public Staff(long staffSSN, String name, String birthdate, String address, Long phoneNumber, String position) {
+	/*public Staff(Long staffSSN, String name, String birthdate, String address, Long phoneNumber, String position) {
 		this.staffSSN = staffSSN;
 		this.name = name;
 		this.birthdate = birthdate;
 		this.address = address;
 		this.phoneNumber = phoneNumber;
 		this.position = position;
-	}
+	}*/
 
-	public long getStaffSSN() {
+	public Long getStaffSSN() {
 		return staffSSN;
 	}
 
-	public void setStaffSSN(long staffSSN) {
+	public void setStaffSSN(Long staffSSN) {
 		this.staffSSN = staffSSN;
 	}
 	
@@ -60,7 +60,7 @@ public class Staff {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(long phoneNumber) {
+	public void setPhoneNumber(Long phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 

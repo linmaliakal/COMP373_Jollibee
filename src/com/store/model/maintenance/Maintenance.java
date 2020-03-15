@@ -29,7 +29,7 @@ public class Maintenance extends Order implements IMaintenance {
 //		RequestDate.entrySet().forEach(entry->{
 //		    System.out.println("Request Number: " + entry.getKey() + " was performed on: " + entry.getValue());  
 //		 });
-		getListMaint();
+		getOrderList();
 		}
 
 	public void makeFacilityMaintRequest(int orderId) {

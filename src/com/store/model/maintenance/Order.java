@@ -17,7 +17,7 @@ public class Order{
 	String requestDate; // date of the request in the format MMDDYY
 	public int inspections = 0; // number of inspections made
 		
-	public ArrayList<Integer> OrderList = new ArrayList();
+	public ArrayList<Integer> OrderList = new ArrayList<Integer>();
 	//AKA the list of performed MAINTENANCE
 	
 	public ArrayList<String> orderInfo = new ArrayList<String>();
@@ -28,9 +28,6 @@ public class Order{
 	
 	public HashMap<Integer, Integer> orderDates = new HashMap<Integer, Integer>();
 	// DATES of Orders in the format MMDDYY
-	
-	public ArrayList<Integer> listMaint = new ArrayList<Integer>();
-	// LIST all MAINTENANCE performed
 	
 	public HashMap<Integer, String> clientOrderRequest = new HashMap<Integer, String>();
 
@@ -123,13 +120,6 @@ public class Order{
 		this.orderDates = orderDates;
 	}
 
-	public ArrayList<Integer> getListMaint() {
-		return listMaint;
-	}
-
-	public void setListMaint(ArrayList<Integer> listMaint) {
-		this.listMaint = listMaint;
-	}
 	public HashMap<Integer, String> getClientOrderRequest() {
 		return clientOrderRequest;
 	}

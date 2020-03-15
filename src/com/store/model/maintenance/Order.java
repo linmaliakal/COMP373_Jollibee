@@ -29,7 +29,7 @@ public class Order{
 	public HashMap<Integer, Integer> orderDates = new HashMap<Integer, Integer>();
 	// DATES of Orders in the format MMDDYY
 	
-	public ArrayList<Integer> listMaint = new ArrayList();
+	public ArrayList<Integer> listMaint = new ArrayList<Integer>();
 	// LIST all MAINTENANCE performed
 	
 	public HashMap<Integer, String> clientOrderRequest = new HashMap<Integer, String>();

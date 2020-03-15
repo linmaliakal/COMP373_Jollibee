@@ -5,28 +5,42 @@ import java.util.*;
 public class Order{
 	public int orderId;
 	//identifier for each order
-	public Order(int orderId) {
 	
-	}
+	
+	// DETAILS FOR EACH ORDER
+	int cost;
+	int date;
+	
+	
+	String orderDescr; //Description of the order
+	String orderRequest; // type of Request
+	String requestDate; // date of the request in the format MMDDYY
+	public int inspections = 0; // number of inspections made
 		
 	public ArrayList<Integer> OrderList = new ArrayList();
 	//AKA the list of performed MAINTENANCE
-
-	public HashMap<Integer, String> OrderDetails = new HashMap<Integer, String>();
-	//AKA DETAILS of the order. the TYPE of order. can be INSPECTION, FOOD, MACHINE, or CLEAN
-
-	//AKA the information for request for maintenance
-	public HashMap<Integer, String> RequestList = new HashMap<Integer, String>();
-	//AKA the list of maintenance REQUESTS with orderId and OrderDetails
-	public int inspections = 0;
-	public HashMap<Integer, Long> RequestDate = new HashMap<Integer, Long>();
-	//AKA date of request
-	public HashMap<Integer, Long> RequestTime = new HashMap<Integer, Long>();
-	//AKA time of request
-	public HashMap<Integer, Long> OrderCost = new HashMap<Integer, Long>();
-	//AKA cost of request
 	
+	public ArrayList<String> orderInfo = new ArrayList<String>();
+	//AKA information for the order
+	
+	public ArrayList<String> RequestList = new ArrayList<String>();
+	//AKA the list of maintenance REQUESTS with orderId and OrderDetails
+	
+	public HashMap<Integer, Integer> orderDates = new HashMap<Integer, Integer>();
+	// DATES of Orders in the format MMDDYY
+	
+	public ArrayList<Integer> listMaint = new ArrayList();
+	// LIST all MAINTENANCE performed
+	
+	public HashMap<Integer, String> clientOrderRequest = new HashMap<Integer, String>();
 
+	// CLIENT HASHMAP for order requests
+	public HashMap<Integer, String> clientOrderInfo = new HashMap<Integer, String>();
+	// CLIENT HASHMAP for order information
+	
+	
+	public Order(int orderId) {	
+	}
 	
 	public int getOrderId() {
 		//return the id of order
@@ -38,30 +52,6 @@ public class Order{
 		this.orderId = orderId;
 	}
 	
-	public Long getRequestDate(int orderId) {
-		return RequestDate.get(orderId);
-	}
-
-	public void setRequestDate(int orderId, Long requestDate) {
-		RequestDate.put(orderId, requestDate);
-	}
-
-	public Long getRequestTime(int orderId) {
-		return RequestTime.get(orderId);
-	}
-
-	public void setRequestTime(int orderId, Long requestTime) {
-		RequestTime.put(orderId, requestTime);
-	}
-
-	public Long getOrderCost(int orderId) {
-		return OrderCost.get(orderId);
-	}
-
-	public void setOrderCost(int orderId, Long requestCost) {
-		OrderCost.put(orderId, requestCost);
-	}
-	
 	public ArrayList<Integer> getOrderList() {
 		return OrderList;
 	}
@@ -69,29 +59,98 @@ public class Order{
 	public void setOrderList(ArrayList<Integer> orderList) {
 		OrderList = orderList;
 	}
+	public int getCost() {
+		return cost;
+	}
 
-	public HashMap<Integer, String> getRequestList() {
+	public void setCost(int cost) {
+		this.cost = cost;
+	}
+
+	public int getDate() {
+		return date;
+	}
+
+	public void setDate(int date) {
+		this.date = date;
+	}
+
+	public String getOrderDescr() {
+		return orderDescr;
+	}
+
+	public void setOrderDescr(String orderDescr) {
+		this.orderDescr = orderDescr;
+	}
+
+	public String getOrderRequest() {
+		return orderRequest;
+	}
+
+	public void setOrderRequest(String orderRequest) {
+		this.orderRequest = orderRequest;
+	}
+
+	public String getRequestDate() {
+		return requestDate;
+	}
+
+	public void setRequestDate(String requestDate) {
+		this.requestDate = requestDate;
+	}
+
+	public ArrayList<String> getOrderInfo() {
+		return orderInfo;
+	}
+
+	public void setOrderInfo(ArrayList<String> orderInfo) {
+		this.orderInfo = orderInfo;
+	}
+
+	public ArrayList<String> getRequestList() {
 		return RequestList;
 	}
 
-	public void setRequestList(HashMap<Integer, String> requestList) {
+	public void setRequestList(ArrayList<String> requestList) {
 		RequestList = requestList;
 	}
-	
 
-	public String getOrderDetails(int orderIndex) {
-		return OrderDetails.get(orderIndex);
+	public HashMap<Integer, Integer> getOrderDates() {
+		return orderDates;
+	}
+
+	public void setOrderDates(HashMap<Integer, Integer> orderDates) {
+		this.orderDates = orderDates;
+	}
+
+	public ArrayList<Integer> getListMaint() {
+		return listMaint;
+	}
+
+	public void setListMaint(ArrayList<Integer> listMaint) {
+		this.listMaint = listMaint;
+	}
+	public HashMap<Integer, String> getClientOrderRequest() {
+		return clientOrderRequest;
+	}
+
+	public void setClientOrderRequest(HashMap<Integer, String> clientOrderRequest) {
+		this.clientOrderRequest = clientOrderRequest;
+	}
+
+	public HashMap<Integer, String> getClientOrderInfo() {
+		return clientOrderInfo;
+	}
+
+	public void setClientOrderInfo(HashMap<Integer, String> clientOrderInfo) {
+		this.clientOrderInfo = clientOrderInfo;
 	}
 	
+	public void setInspections(int inspections) {
+		this.inspections = inspections;
+	}
 	
 	public int getInspections() {
-		return inspections;
-	}
-	public int setOrderDetails(int orderId, String detail) {
-		if (detail.equals("INSPECTION")) {
-			inspections++;
-		}
-		OrderDetails.put(orderId, detail);
 		return inspections;
 	}
 	

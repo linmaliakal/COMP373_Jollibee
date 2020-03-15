@@ -1,7 +1,7 @@
 package com.store.model.maintenance;
 
 public interface IMaintenance {
-	public String listInspections();
+	public void listInspections();
 	public void listMaintRequests();
 	public void listMaintenance();
 }

@@ -56,7 +56,7 @@ public class StoreClient {
 		maintenance.setRequestDate("12/23/2020");
 		maintenance.scheduleMaintenance(12);
 		maintenance.listMaintenance();
-//		maintenance.setOrderDetails("FOOD SUPPLIES");
+		maintenance.makeFacilityMaintRequest(12, "FOOD SUPPLIES");
 		maintenance.setRequestDate("13/10/2020");
 		maintenance.scheduleMaintenance(13);
 //		maintenance.setOrderDetails(13, "INSPECTION");

@@ -27,8 +27,9 @@ public class Maintenance extends Order implements IMaintenance {
 		getOrderList();
 	}
 
-	public void makeFacilityMaintRequest(int orderId) {
-//		RequestList.add(orderId, orderDetail);
+	public ArrayList<String> makeFacilityMaintRequest(int orderId, String orderDetail) {
+		RequestList.add(orderId, orderDetail);
+		return RequestList;
 //		return ("Request order number " + orderId + " is a request to maintain " + orderDetail);
 	}
 	

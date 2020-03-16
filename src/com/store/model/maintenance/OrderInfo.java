@@ -13,7 +13,7 @@ public class OrderInfo {
 	//AKA details of the actual order
 	HashMap<Integer, String> OrderDetails = new HashMap<Integer, String>();
 	//AKA the information for request for maintenance
-	HashMap<Integer, String> RequestList = new HashMap<Integer, String>();
+	HashMap<Integer, String> MaintRequestList = new HashMap<Integer, String>();
 	//AKA the list of maintenance REQUESTS with orderId and OrderDetails
 	int inspections;
 	HashMap<Integer, Long> RequestDate = new HashMap<Integer, Long>();
@@ -67,12 +67,12 @@ public class OrderInfo {
 		OrderList = orderList;
 	}
 
-	public HashMap<Integer, String> getRequestList() {
-		return RequestList;
+	public HashMap<Integer, String> getMaintRequestList() {
+		return MaintRequestList;
 	}
 
-	public void setRequestList(HashMap<Integer, String> requestList) {
-		RequestList = requestList;
+	public void setMaintRequestList(HashMap<Integer, String> requestList) {
+		MaintRequestList = requestList;
 	}
 
 	

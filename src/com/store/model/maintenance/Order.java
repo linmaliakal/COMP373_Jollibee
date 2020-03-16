@@ -9,12 +9,11 @@ public class Order{
 	
 	// DETAILS FOR EACH ORDER
 	int cost;
-	int date;
 	
 	
 	String orderDescr; //Description of the order
 	String orderRequest; // type of Request
-	String requestDate; // date of the request in the format MMDDYY
+	String requestDate; // date of the request in the format MM/DD/YYYY
 	String requestTime; //time of the order request, when to be performed
 	public int inspections = 0; // number of inspections made
 		
@@ -65,13 +64,6 @@ public class Order{
 		this.cost = cost;
 	}
 
-	public int getDate() {
-		return date;
-	}
-
-	public void setDate(int date) {
-		this.date = date;
-	}
 
 	public String getOrderDescr() {
 		return orderDescr;

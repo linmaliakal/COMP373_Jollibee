@@ -41,14 +41,15 @@ public class StoreClient {
 		Order order1 = new Order(12);
 		Order order2 = new Order(13);
 		
-//		order1.setOrderId(12);
-//		order1.setRequestDate(12,22012019l);
-//		order1.setRequestTime(12,1200l);
-//		order1.setOrderCost(12,3000l);
-//		order2.setOrderId(13);
-//		order2.setRequestDate(13, 13102020l);
-//		order2.setRequestTime(13, 1500l);
-//		order2.setOrderCost(13, 500l);
+		order1.setOrderId(12);
+		order1.setRequestDate("22/01/2019");
+		order1.setRequestTime("12:00PM");
+		order1.setCost(3000);
+		
+		order2.setOrderId(13);
+		order2.setRequestDate("13/10/2020");
+		order2.setRequestTime("3:00PM");
+		order2.setCost(500);
 //		
 //		//Testing for maintenance
 //		Maintenance maintenance = new Maintenance(12);

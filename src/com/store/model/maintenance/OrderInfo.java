@@ -18,7 +18,7 @@ public class OrderInfo {
 	int inspections;
 	HashMap<Integer, Long> RequestDate = new HashMap<Integer, Long>();
 	//AKA date of request
-	HashMap<Integer, Long> RequesTime = new HashMap<Integer, Long>();
+	HashMap<Integer, Long> RequestTime = new HashMap<Integer, Long>();
 	//AKA time of request
 	HashMap<Integer, Long> RequestCost = new HashMap<Integer, Long>();
 	//AKA cost of request
@@ -43,12 +43,12 @@ public class OrderInfo {
 		RequestDate = requestDate;
 	}
 
-	public HashMap<Integer, Long> getRequesTime() {
-		return RequesTime;
+	public HashMap<Integer, Long> getRequestTime() {
+		return RequestTime;
 	}
 
-	public void setRequesTime(HashMap<Integer, Long> requesTime) {
-		RequesTime = requesTime;
+	public void setRequestTime(HashMap<Integer, Long> requestTime) {
+		RequestTime = requestTime;
 	}
 
 	public HashMap<Integer, Long> getRequestCost() {

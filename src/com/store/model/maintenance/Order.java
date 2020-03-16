@@ -15,6 +15,7 @@ public class Order{
 	String orderDescr; //Description of the order
 	String orderRequest; // type of Request
 	String requestDate; // date of the request in the format MMDDYY
+	String requestTime; //time of the order request, when to be performed
 	public int inspections = 0; // number of inspections made
 		
 	public ArrayList<Integer> OrderList = new ArrayList<Integer>();
@@ -142,6 +143,14 @@ public class Order{
 	
 	public int getInspections() {
 		return inspections;
+	}
+
+	public String getRequestTime() {
+		return requestTime;
+	}
+
+	public void setRequestTime(String requestTime) {
+		this.requestTime = requestTime;
 	}
 	
 	

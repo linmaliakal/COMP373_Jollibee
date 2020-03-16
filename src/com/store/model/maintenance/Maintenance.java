@@ -16,21 +16,15 @@ public class Maintenance extends Order implements IMaintenance {
 
 	@Override
 	public void listMaintRequests() {
-		// TODO Auto-generated method stub
-//		RequestList.entrySet().forEach(entry->{
-//		    System.out.println("Request Number: " + entry.getKey() + " is for: " + entry.getValue());  
-//		 });
-
+		// listing the Maintenance Requests currently being done for Facility
+		getRequestList();
 	}
 
 	@Override
 	public void listMaintenance() {
-		// TODO Auto-generated method stub
-//		RequestDate.entrySet().forEach(entry->{
-//		    System.out.println("Request Number: " + entry.getKey() + " was performed on: " + entry.getValue());  
-//		 });
+		// listing Maintenance already done for Facility
 		getOrderList();
-		}
+	}
 
 	public void makeFacilityMaintRequest(int orderId) {
 		

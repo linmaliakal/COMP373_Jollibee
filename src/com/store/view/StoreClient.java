@@ -50,15 +50,15 @@ public class StoreClient {
 		order2.setRequestDate("13/10/2020");
 		order2.setRequestTime("3:00PM");
 		order2.setCost(500);
-//		
+		
 //		//Testing for maintenance
-//		Maintenance maintenance = new Maintenance(12);
-//		maintenance.setRequestDate(12,400l);
-//		maintenance.scheduleMaintenance(12);
-//		maintenance.listMaintenance();
-//		maintenance.setOrderDetails(12, "FOOD SUPPLIES");
-//		maintenance.setRequestDate(13,13102020l);
-//		maintenance.scheduleMaintenance(13);
+		Maintenance maintenance = new Maintenance(12);
+		maintenance.setRequestDate("12/23/2020");
+		maintenance.scheduleMaintenance(12);
+		maintenance.listMaintenance();
+//		maintenance.setOrderDetails("FOOD SUPPLIES");
+		maintenance.setRequestDate("13/10/2020");
+		maintenance.scheduleMaintenance(13);
 //		maintenance.setOrderDetails(13, "INSPECTION");
 //	
 //		System.out.println("Order details are as follows:");

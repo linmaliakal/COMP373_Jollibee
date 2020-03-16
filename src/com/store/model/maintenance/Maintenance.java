@@ -2,6 +2,7 @@ package com.store.model.maintenance;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import com.store.model.maintenance.OrderInfo;
 
 
 public class Maintenance extends Order implements IMaintenance {
@@ -27,9 +28,7 @@ public class Maintenance extends Order implements IMaintenance {
 	}
 
 	public void makeFacilityMaintRequest(int orderId) {
-		
-//		CODE OLD
-//		RequestList.add(orderDetail);
+//		RequestList.add(orderId, orderDetail);
 //		return ("Request order number " + orderId + " is a request to maintain " + orderDetail);
 	}
 	

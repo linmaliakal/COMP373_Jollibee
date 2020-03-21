@@ -11,7 +11,6 @@ class facilityTest {
 		Facility facility = new Facility(0);
 	@BeforeEach
 	void setUp() throws Exception {
-		
 		facility.getFacilityList();
 		facility.setFacilityId(1);
 	}
@@ -21,8 +20,29 @@ class facilityTest {
 	}
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testCreateFacility() {
+		facility.createFacility();
+		facility.createFacility();
+		assertEquals(2, facility.getFacilityList().size());
+	}
+	
+	@Test
+	void testRemoveFacility() {
+		facility.createFacility();
+		facility.removeFacility(0);;
+		assertEquals(0, facility.getFacilityList().size());
+	}
+	
+	@Test
+	void testListFacilities() {
+		//test showing that each individual facility created
+		facility.createFacility();
+		assertEquals(1, facility.getFacilityList().size());
 	}
 
+	@Test
+	void testInUseDuring() {
+		int useInterval = facility.isInUseDuringInterval();
+		assertEquals(36, useInterval);
+	}
 }

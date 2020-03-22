@@ -30,5 +30,33 @@ class maintenanceTest {
 	void testMakeFacilityMaintRequest() {
 		maintenance.makeFacilityMaintRequest(1);
 	}
+	
+	@Test
+	void testScheduleMaintenance() {
+		maintenance.getOrderId();
+		maintenance.setOrderId(1);
+		maintenance.scheduleMaintenance(1);
+	}
+	
+	@Test
+	void testListMaintenanceRequests() {
+		maintenance.getOrderId();
+		maintenance.setOrderId(1);
+		maintenance.listMaintRequests();
+	}
+	
+	@Test
+	void testListMaintenance() {
+		maintenance.getOrderId();
+		maintenance.setOrderId(1);
+		maintenance.listMaintenance();
+	}
+	
+	@Test
+	void testListInspections() {
+		maintenance.getOrderId();
+		maintenance.setOrderId(1);
+		maintenance.listInspections();
+	}
 
 }

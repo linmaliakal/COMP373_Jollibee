@@ -6,26 +6,29 @@ public class Facility extends FacilityRequests implements IFacility{
 	
 	
 	public Facility(int facilityId) {
+	//create facility with an Id number
 		super(facilityId);
 	}
 	
 	public int getFacilityId() {
+	//get facility id
 		return facilityId;
 	}
 	public void setFacilityId(int facilityId) {
+	//set the facility id
 		this.facilityId = facilityId;
 	}
 	
 	@Override
 	public void listFacilities() {
-//		 TODO Auto-generated method stub
+	//list all facilities
 		for(int i=0;i<FacilityList.size();i++) {
 			System.out.println(FacilityList.get(i));
 		}
 		
 	}
 	public int createFacility() {
-		// TODO use getFacility to create a new one and add to the FacilityList
+		//use to create a new one and add to the FacilityList
 		Facility facility = new Facility(facilityId);
 		FacilityList.add(facility);
 		facilityId++;

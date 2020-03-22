@@ -26,14 +26,15 @@ public class Facility extends FacilityRequests implements IFacility{
 	}
 	public int createFacility() {
 		// TODO use getFacility to create a new one and add to the FacilityList
-		int newFacility = facilityId++;
-		//FacilityList.add(newFacility);
+		Facility facility = new Facility(facilityId);
+		FacilityList.add(facility);
+		facilityId++;
 		return facilityId;
 	}
 	
 	public void removeFacility(int facilityId) {
 		// TODO use the given id to remove a facility from FacilityList
-		//FacilityList.remove(facilityId);
+		FacilityList.remove(facilityId);
 	}
 
 	

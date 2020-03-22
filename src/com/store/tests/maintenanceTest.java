@@ -29,7 +29,7 @@ class maintenanceTest {
 	
 	@Test
 	void testMakeFacilityMaintRequest() {
-		maintenance.makeFacilityMaintRequest(1);
+		maintenance.makeFacilityMaintRequest(1, "FOOD SUPPLIES");
 	}
 	
 	@Test

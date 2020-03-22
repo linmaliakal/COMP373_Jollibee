@@ -30,6 +30,7 @@ class maintenanceTest {
 	@Test
 	void testMakeFacilityMaintRequest() {
 		maintenance.makeFacilityMaintRequest(1, "FOOD SUPPLIES");
+		assertEquals(2, maintenance.RequestList.size());
 	}
 	
 	@Test
@@ -37,6 +38,7 @@ class maintenanceTest {
 		maintenance.getOrderId();
 		maintenance.setOrderId(1);
 		maintenance.scheduleMaintenance(1);
+		assertEquals(2, maintenance.OrderList.size());
 	}
 	
 	@Test
@@ -44,6 +46,7 @@ class maintenanceTest {
 		maintenance.getOrderId();
 		maintenance.setOrderId(1);
 		maintenance.listMaintRequests();
+		assertEquals(2, maintenance.getRequestList().size());
 	}
 	
 	@Test
@@ -51,6 +54,7 @@ class maintenanceTest {
 		maintenance.getOrderId();
 		maintenance.setOrderId(1);
 		maintenance.listMaintenance();
+		assertEquals(2, maintenance.getOrderList().size());
 	}
 	
 	@Test
@@ -58,6 +62,7 @@ class maintenanceTest {
 		maintenance.getOrderId();
 		maintenance.setOrderId(1);
 		maintenance.listInspections();
+		assertEquals(2, maintenance.getInspections());
 	}
 
 }

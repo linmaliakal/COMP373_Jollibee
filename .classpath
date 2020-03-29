@@ -19,5 +19,5 @@
 	<classpathentry kind="lib" path="/Users/mikeycabrera/local/SP20/COMP 373/spring dependencies/spring-context-5.1.9.RELEASE.jar"/>
 	<classpathentry kind="lib" path="/Users/mikeycabrera/local/SP20/COMP 373/spring dependencies/spring-core-5.1.9.RELEASE.jar"/>
 	<classpathentry kind="lib" path="/Users/mikeycabrera/local/SP20/COMP 373/spring dependencies/spring-expression-5.1.9.RELEASE.jar"/>
-	<classpathentry kind="output" path="src/com.store.view/StoreClient.java"/>
+	<classpathentry kind="output" path="src"/>
 </classpath>

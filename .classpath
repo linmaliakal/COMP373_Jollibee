@@ -7,17 +7,11 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry exported="true" kind="lib" path="/Users/linmaliakal/Downloads/apache-cxf-2.6.1/lib/commons-logging-1.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/linmaliakal/Downloads/apache-cxf-3.3.3/lib/spring-context-5.1.9.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/linmaliakal/Downloads/apache-cxf-3.3.3/lib/spring-core-5.1.9.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/linmaliakal/Downloads/apache-cxf-3.3.3/lib/spring-beans-5.1.9.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/linmaliakal/Downloads/apache-cxf-3.3.3/lib/spring-aop-5.1.9.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/linmaliakal/Downloads/apache-cxf-3.3.3/lib/spring-expression-5.1.9.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/Users/mikeycabrera/local/SP20/COMP 373/spring dependencies/commons-logging-1.1.1.jar"/>
-	<classpathentry kind="lib" path="/Users/mikeycabrera/local/SP20/COMP 373/spring dependencies/spring-aop-5.1.9.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/Users/mikeycabrera/local/SP20/COMP 373/spring dependencies/spring-beans-5.1.9.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/Users/mikeycabrera/local/SP20/COMP 373/spring dependencies/spring-context-5.1.9.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/Users/mikeycabrera/local/SP20/COMP 373/spring dependencies/spring-core-5.1.9.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/Users/mikeycabrera/local/SP20/COMP 373/spring dependencies/spring-expression-5.1.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/linmaliakal/Downloads/apache-cxf-3.3.3/lib/spring-aop-5.1.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/linmaliakal/Downloads/apache-cxf-3.3.3/lib/spring-beans-5.1.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/linmaliakal/Downloads/apache-cxf-3.3.3/lib/spring-context-5.1.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/linmaliakal/Downloads/apache-cxf-3.3.3/lib/spring-core-5.1.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/linmaliakal/Downloads/apache-cxf-3.3.3/lib/spring-expression-5.1.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/linmaliakal/Downloads/apache-cxf-2.6.1/lib/commons-logging-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

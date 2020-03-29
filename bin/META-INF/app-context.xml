@@ -9,4 +9,17 @@
 	
 	<context:component-scan base-package="com.store" />
 	
+	<bean id="facility" class="com.store.model.facility.Facility" scope="prototype"></bean>
+	<bean id="maintenance"
+		class="com.store.model.maintenance.Maintenance" scope="prototype">
+	</bean>
+	<bean id="orderInfo" class="com.store.model.maintenance.Order"
+		scope="prototype">
+	</bean>
+	<bean id="staff" class="com.store.model.use.Staff"
+		scope="prototype">
+	</bean>
+	<bean id="getAllStaff" class="com.store.model.use.StaffLogic"
+		scope="prototype">
+	</bean>
 </beans>

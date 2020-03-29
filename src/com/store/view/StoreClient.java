@@ -8,6 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.store.model.use.Staff;
 import com.store.model.use.IUse;
+import com.store.model.service.StaffService;
 import com.store.model.facility.Facility;
 import com.store.model.facility.FacilityDetails;
 import com.store.model.maintenance.OrderInfo;
@@ -18,8 +19,13 @@ public class StoreClient {
 	
 	public static void main (String args[]) throws Exception {
 		
+		ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/app-context.xml");
+        System.out.println("***************** Application Context instantiated! ******************");
+        
+        Staff staffPerson = (Staff) context.getBean("staff");
 		//adding a new Staff member
-		Staff staffPerson = new Staff();
+        //Staff staff = staffPerson.getStaff();
+		//Staff staffPerson = new Staff();
 		staffPerson.setStaffSSN(123456789l);
 		staffPerson.setName("Lindsay Chaplin");
 		staffPerson.setBirthdate("01/20/1987");

@@ -62,27 +62,26 @@ public class StoreClient {
 		order2.setCost(500);
 		
 //		//Testing for maintenance
-		Maintenance maintenance = new Maintenance(12);
+		Maintenance maintenance = (Maintenance) context.getBean("maintenance");
 		maintenance.setRequestDate("12/23/2020");
 		maintenance.scheduleMaintenance(12);
 		maintenance.listMaintenance();
 		maintenance.makeFacilityMaintRequest(12, "FOOD SUPPLIES");
 		maintenance.setRequestDate("13/10/2020");
 		maintenance.scheduleMaintenance(13);
-//		maintenance.setOrderDetails(13, "INSPECTION");
-//	
-//		System.out.println("Order details are as follows:");
-//		System.out.println(maintenance.getOrderDetails(12));
-//		System.out.println(maintenance.getOrderDetails(13));
-//		
-//		System.out.println("Maintenance Request (12) includes:" //Sample report of maintenance request.
-//				+ "\n Date: " + order1.getRequestDate(12)  
-//				+ "\n Time: " + order1.getRequestTime(12) 
-//				+ "\n Cost: " + order1.getOrderCost(12));
-//		System.out.println(maintenance.makeFacilityMaintRequest(12, "FOOD SUPPLIES"));
-//		System.out.println(maintenance.makeFacilityMaintRequest(13, "INSPECTION"));
-//		maintenance.listMaintRequests(); //List all maintenance requests and their functions.
-//		System.out.println(maintenance.listInspections());
+		
+	
+		System.out.println("Order details are as follows:");
+		System.out.println(order1.getOrderDescr());
+		System.out.println(order2.getOrderDescr());
+		
+		System.out.println("Maintenance Request (12) includes:" //Sample report of maintenance request.
+				+ "\n Date: " + order1.getRequestDate()  
+				+ "\n Time: " + order1.getRequestTime() 
+				+ "\n Cost: " + order1.getCost());
+		System.out.println(maintenance.makeFacilityMaintRequest(12, "FOOD SUPPLIES"));
+		System.out.println(maintenance.makeFacilityMaintRequest(13, "INSPECTION"));
+		maintenance.listMaintRequests(); //List all maintenance requests and their functions.
 	}
 
 }

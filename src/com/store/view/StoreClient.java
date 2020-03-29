@@ -33,7 +33,8 @@ public class StoreClient {
 		staff.setPosition("Manager");
 				
 		//add new Facility & it's Details
-		Facility facility = new Facility(0);
+		Facility facility = (Facility) context.getBean("facility");
+		//create facility beans
 		facility.setFacilityId(10);
 		FacilityDetails facilityDetails = new FacilityDetails();
 		facilityDetails.setUseInterval(36);
@@ -44,7 +45,7 @@ public class StoreClient {
 		//facilityDetails.setFacilityList("");
 		System.out.println("\tName: \t\t\t" + staff.getName() + "\n" + "\tBirthdate: \t\t"+ staff.getBirthdate() + "\n"+ "\tAddress: \t\t" + staff.getAddress() + "\n"+ "\tPhone Number: \t\t" + staff.getPhoneNumber() + "\n" + "\tPosition: \t\t"+ staff.getPosition() + "\n");
 		System.out.println("\tFacility ID: \t\t" + facility.getFacilityId());
-		System.out.println("\tName of Store: \t\t" + facilityDetails.getFacilityName() + "\n\tType of Food: \t\t" + facilityDetails.getTypeOfFood() + "\n\tFacility Use Interval: \t" + facilityDetails.getUseInterval() + " months" + "\n\tUsage Rate: \t\t" + facilityDetails.calcUsageRate() + "\n\tDown Time: \t\t" + facilityDetails.calcDownTimeForFacility() + " months\n");
+//		System.out.println("\tName of Store: \t\t" + facilityDetails.getFacilityName() + "\n\tType of Food: \t\t" + facilityDetails.getTypeOfFood() + "\n\tFacility Use Interval: \t" + facilityDetails.getUseInterval() + " months" + "\n\tUsage Rate: \t\t" + facilityDetails.calcUsageRate() + "\n\tDown Time: \t\t" + facilityDetails.calcDownTimeForFacility() + " months\n");
 	
 		//adds Maintenance Order for Facility
 		Order order1 = new Order(12);

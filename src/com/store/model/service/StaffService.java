@@ -5,6 +5,7 @@ import com.store.model.use.Staff;
 
 public class StaffService {
 	private StaffDAO staffDAO = new StaffDAO();
+	private Staff staff;
 	
 	//search staff by ID/SSN
 	public Staff findStaffById(Long staffSSN) {
@@ -28,6 +29,14 @@ public class StaffService {
 	      System.err.println("StaffService: Threw a Exception retrieving staff.");
 	      System.err.println(se.getMessage());
 	    }
+	}
+
+	public Staff getStaff() {
+		return staff;
+	}
+
+	public void setStaff(Staff staff) {
+		this.staff = staff;
 	}
 
 }

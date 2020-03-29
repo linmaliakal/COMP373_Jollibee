@@ -19,6 +19,9 @@
 	<bean id="staff" class="com.store.model.use.Staff"
 		scope="prototype">
 	</bean>
+	<bean id="staffService" class="com.store.model.service.StaffService" scope="prototype">
+		<property name="staff" ref="staff" />
+	</bean>
 	<bean id="getAllStaff" class="com.store.model.use.StaffLogic"
 		scope="prototype">
 	</bean>

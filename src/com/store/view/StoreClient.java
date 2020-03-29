@@ -22,16 +22,15 @@ public class StoreClient {
 		ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/app-context.xml");
         System.out.println("***************** Application Context instantiated! ******************");
         
-        Staff staffPerson = (Staff) context.getBean("staff");
+        StaffService staffPerson = (StaffService) context.getBean("staffService");
 		//adding a new Staff member
-        //Staff staff = staffPerson.getStaff();
-		//Staff staffPerson = new Staff();
-		staffPerson.setStaffSSN(123456789l);
-		staffPerson.setName("Lindsay Chaplin");
-		staffPerson.setBirthdate("01/20/1987");
-		staffPerson.setAddress("6301 N Sheridan Road, Evanston, IL 60660");
-		staffPerson.setPhoneNumber(8474019233l);
-		staffPerson.setPosition("Manager");
+        Staff staff = staffPerson.getStaff();
+		staff.setStaffSSN(123456789l);
+		staff.setName("Lindsay Chaplin");
+		staff.setBirthdate("01/20/1987");
+		staff.setAddress("6301 N Sheridan Road, Evanston, IL 60660");
+		staff.setPhoneNumber(8474019233l);
+		staff.setPosition("Manager");
 				
 		//add new Facility & it's Details
 		Facility facility = new Facility(0);
@@ -43,7 +42,7 @@ public class StoreClient {
 		facilityDetails.calcUsageRate();
 		facilityDetails.calcDownTimeForFacility();
 		//facilityDetails.setFacilityList("");
-		System.out.println("\tName: \t\t\t" + staffPerson.getName() + "\n" + "\tBirthdate: \t\t"+ staffPerson.getBirthdate() + "\n"+ "\tAddress: \t\t" + staffPerson.getAddress() + "\n"+ "\tPhone Number: \t\t" + staffPerson.getPhoneNumber() + "\n" + "\tPosition: \t\t"+ staffPerson.getPosition() + "\n");
+		System.out.println("\tName: \t\t\t" + staff.getName() + "\n" + "\tBirthdate: \t\t"+ staff.getBirthdate() + "\n"+ "\tAddress: \t\t" + staff.getAddress() + "\n"+ "\tPhone Number: \t\t" + staff.getPhoneNumber() + "\n" + "\tPosition: \t\t"+ staff.getPosition() + "\n");
 		System.out.println("\tFacility ID: \t\t" + facility.getFacilityId());
 		System.out.println("\tName of Store: \t\t" + facilityDetails.getFacilityName() + "\n\tType of Food: \t\t" + facilityDetails.getTypeOfFood() + "\n\tFacility Use Interval: \t" + facilityDetails.getUseInterval() + " months" + "\n\tUsage Rate: \t\t" + facilityDetails.calcUsageRate() + "\n\tDown Time: \t\t" + facilityDetails.calcDownTimeForFacility() + " months\n");
 	

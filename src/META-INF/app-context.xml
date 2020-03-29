@@ -13,7 +13,7 @@
 	<bean id="maintenance"
 		class="com.store.model.maintenance.Maintenance" scope="prototype">
 	</bean>
-	<bean id="orderInfo" class="com.store.model.maintenance.Order"
+	<bean id="order" class="com.store.model.maintenance.Order"
 		scope="prototype">
 	</bean>
 	<bean id="staff" class="com.store.model.use.Staff"

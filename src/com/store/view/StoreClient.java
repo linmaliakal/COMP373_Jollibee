@@ -48,8 +48,8 @@ public class StoreClient {
 //		System.out.println("\tName of Store: \t\t" + facilityDetails.getFacilityName() + "\n\tType of Food: \t\t" + facilityDetails.getTypeOfFood() + "\n\tFacility Use Interval: \t" + facilityDetails.getUseInterval() + " months" + "\n\tUsage Rate: \t\t" + facilityDetails.calcUsageRate() + "\n\tDown Time: \t\t" + facilityDetails.calcDownTimeForFacility() + " months\n");
 	
 		//adds Maintenance Order for Facility
-		Order order1 = new Order(12);
-		Order order2 = new Order(13);
+		Order order1 = (Order) context.getBean("order");
+		Order order2 = (Order) context.getBean("order");
 		
 		order1.setOrderId(12);
 		order1.setRequestDate("22/01/2019");

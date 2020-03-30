@@ -1,9 +1,10 @@
 # COMP 373 - Facility of the Jollibee Food Chain
 ## What It Is
-Project 1 for COMP 373. Building a Facility structure for the Jollibee Fast Food Chain.
+Project 2 for COMP 373. Building a Facility structure for the Jollibee Fast Food Chain.
 
 ## Summary
 For this project, we created a Facility in which there are lots for shops in a food court that people can rent out. We used the specifications provided in class as the basis for all of our methods. We divided the project into different packages to organize the code. 
+03/29/20 - We have now implemented beans to create the objects for the system.
 
 ### How to Run:
 1. Open project in Eclipse or any Java IDE. 
